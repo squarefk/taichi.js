@@ -40,6 +40,16 @@ def do_compile(target, source=None, extra=[]):
         print('The program output was:')
         print(output.decode())
         print('(END)')
+
+
+
+        print('=======================================================')
+        print(target, source, extra)
+        print('=======================================================')
+        return 'wtf', 'success'
+
+
+
         subprocess.check_call(['docker', 'cp', container + ':/app/main.py.yml', f'{source}.yml'])
     except Exception as e:
         raise e

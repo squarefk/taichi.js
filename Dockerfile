@@ -12,6 +12,8 @@ RUN apt-get update
 
 RUN apt-get install libtinfo5
 
+RUN apt-get install libz3-dev -y
+
 #RUN pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 
 RUN pip install -r requirements.txt

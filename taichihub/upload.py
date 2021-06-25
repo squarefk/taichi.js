@@ -127,8 +127,11 @@ def compile_code(source):
     cacheid, dst = get_cache_path(source)
 
     script = f'/cache/{cacheid}.js'
-    if os.path.exists(dst + '.js'):
-        return {'status': 'cached', 'cacheid': cacheid, 'script': script}
+
+    print('=======================================================')
+    # if os.path.exists(dst + '.js'):
+    #     return {'status': 'cached', 'cacheid': cacheid, 'script': script}
+    print('=======================================================')
 
     with tempfile.TemporaryDirectory() as tmpdir:
         src = os.path.join(tmpdir, 'main.py')
